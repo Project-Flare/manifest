@@ -107,6 +107,7 @@
   <project path="hardware/xiaomi" name="hardware_xiaomi" remote="flare" />
 
   <!-- Packages -->
+  <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" groups="pdk-fs" remote="flare" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="flare" />
   <project path="packages/apps/FlareZone" name="packages_apps_FlareZone" groups="pdk-fs" remote="flare" />
   <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="flare" />
