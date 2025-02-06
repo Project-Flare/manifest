@@ -110,6 +110,7 @@
   <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" groups="pdk-fs" remote="flare" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="flare" />
   <project path="packages/apps/FlareZone" name="packages_apps_FlareZone" groups="pdk-fs" remote="flare" />
+  <project path="packages/apps/FlareWallpaperStub" name="packages_apps_FlareWallpaperStub" groups="pdk-fs" remote="flare" />
   <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="flare" />
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="flare" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="flare" />

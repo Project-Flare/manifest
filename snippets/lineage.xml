@@ -114,6 +114,7 @@
   <project path="packages/apps/FMRadio" name="LineageOS/android_packages_apps_FMRadio" remote="LineageOS" />
   <project path="packages/apps/Recorder" name="LineageOS/android_packages_apps_Recorder" remote="LineageOS" />
   <project path="packages/apps/SimpleSettingsConfig" name="LineageOS/android_packages_apps_SimpleSettingsConfig" remote="LineageOS" />
+  <project path="packages/modules/NetworkStack" name="LineageOS/android_packages_modules_NetworkStack" groups="pdk-cw-fs,pdk-fs" remote="LineageOS"/>
   <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="LineageOS" />
 
   <!-- Prebuilts -->
