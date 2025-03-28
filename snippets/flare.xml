@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Project Flare -->
+  <remote  name="flare"
+           fetch="https://github.com/Project-Flare/"
+           revision="15-QPR2" />
+  
+  <remote name="gitlab"
+          fetch="https://gitlab.com/" />
+
+  <!-- Rootdir -->
+  <project path="art" name="art" remote="flare" />
+  <project path="bionic" name="bionic" remote="flare" />
+  <project path="manifest" name="manifest" remote="flare" />
+  <project path="kernel/configs" name="kernel_configs" remote="flare" />
+
+  <!-- Bootable -->
+  <project path="bootable/recovery" name="bootable_recovery" remote="flare" />
+  <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" remote="flare" />
+
+  <!-- Build -->
+  <project path="build/make" name="build" groups="pdk" remote="flare" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="flare" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Device -->
+  <project path="device/lineage/sepolicy" name="device_flare_sepolicy" remote="flare" />
+
+  <!-- External -->
+  <project path="external/dtc" name="external_dtc" remote="flare" />
+  <project path="external/gptfdisk" name="external_gptfdisk" remote="flare" />
+  <project path="external/mksh" name="external_mksh" remote="flare" />
+  <project path="external/e2fsprogs" name="external_e2fsprogs" remote="flare" />
+  <project path="external/tinycompress" name="external_tinycompress" remote="flare" />
+  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="flare" />
+  <project path="external/zstd" name="external_zstd" groups="pdk" remote="flare" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="frameworks_av" remote="flare" />
+  <project path="frameworks/base" name="platform_frameworks_base" remote="flare" />
+  <project path="frameworks/native" name="frameworks_native" remote="flare" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="flare" />
+
+  <!-- Hardware -->
+  <project path="hardware/google/pixel" name="hardware_google_pixel" remote="flare" />
+  <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" remote="flare" />
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="flare" />
+  <project path="hardware/libhardware" name="hardware_libhardware" groups="pdk" remote="flare" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" groups="qcom,qcom_wlan,pdk-qcom" remote="flare" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="flare" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="flare" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="flare" />
+  <project path="packages/modules/NetworkStack" name="packages_modules_NetworkStack" groups="pdk-cw-fs,pdk-fs" remote="flare"/>
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="flare" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="flare" />
+
+  <!-- Flare Additions -->
+  <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" groups="pdk-fs" remote="flare" />
+  <project path="packages/apps/FlareZone" name="packages_apps_FlareZone" groups="pdk-fs" remote="flare" />
+  <project path="packages/apps/FlareWallpaperStub" name="packages_apps_FlareWallpaperStub" groups="pdk-fs" remote="flare" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" groups="pdk-fs" remote="flare" />
+  <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" groups="pdk-fs" remote="flare" />  
+  <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="flare" />
+  <project path="packages/overlays/Themes" name="packages_overlays_Themes" remote="flare" />
+
+  <!-- System -->
+  <project path="system/core" name="system_core" remote="flare" />
+  <project path="system/bpf" name="system_bpf" remote="flare" />
+  <project path="system/extras" name="system_extras" remote="flare" />
+  <project path="system/libhidl" name="system_libhidl" remote="flare" />
+  <project path="system/libziparchive" name="system_libziparchive" remote="flare" />
+  <project path="system/media" name="system_media" remote="flare" />
+  <project path="system/security" name="system_security" remote="flare" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="flare" />
+  <project path="system/update_engine" name="system_update_engine" remote="flare" />
+  <project path="system/vold" name="system_vold" remote="flare" />
+
+  <!-- Vendor -->
+  <project path="vendor/extra" name="vendor_extra" remote="flare" />
+  <project path="vendor/flare" name="vendor_flare" remote="flare" />
+  <project path="vendor/support" name="vendor_support" remote="flare" />
+
+  <!-- GMS -->
+  <project path="vendor/gms" name="rayavanindra/vendor_gms" remote="gitlab" revision="15" clone-depth="1" />
+
+</manifest>
