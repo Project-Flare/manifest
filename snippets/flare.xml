@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
+
+  <remote  name="flare"
+           fetch="https://github.com/Project-Flare"
+           revision="refs/heads/15-latest" />
+
+  <!-- General Repos -->
+  <project path="bionic" name="bionic" groups="pdk" remote="flare" />
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="flare" />
+  <project path="build/make" name="build" groups="pdk,sysui-studio" remote="flare">
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/release" name="build_release" groups="pdk,tradefed,sysui-studio" remote="flare" />
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed,sysui-studio" remote="flare">
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Devices Repos -->
+  <project path="device/flare/sepolicy" name="device_flare_sepolicy" remote="flare" />
+
+  <!-- Vendor Repos -->
+  <project path="vendor/flare" name="vendor_flare" remote="flare" />
+
+</manifest>
