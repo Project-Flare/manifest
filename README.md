@@ -7,7 +7,7 @@ To get started with Project Flare, you'll need to get familiar with [Repo](https
 To initialize your local repository, use a command like this:
 
 ```bash
-repo init -u https://github.com/Project-Flare/manifest -b 15 --git-lfs
+repo init -u https://github.com/Project-Flare/android -b 15 --git-lfs
 ```
 
 Then to sync up:
